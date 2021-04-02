@@ -1,0 +1,13 @@
+{
+  "version": 2,
+  "dgSpecHash": "EpXAsNFuAphiiSUfZt30/GgyL+F0c+/yOfLQMrYMvylEbcRrDXc6XSxsB3mKjo1Yd2EBak+YduFm7oMKx64JNA==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\Lia\\Documents\\test\\Tucil3Stima\\Tucil3Stima\\Tucil3Stima.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Lia\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\Lia\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\Lia\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\Lia\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+  ],
+  "logs": []
+}
