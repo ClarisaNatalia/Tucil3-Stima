@@ -115,19 +115,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Lia\\.nuget\\packages\\": {}
+    "C:\\Users\\Rahmah K. Nurdini\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\Lia\\Documents\\test\\Tucil3Stima_Local\\Tucil3Stima\\Tucil3Stima.csproj",
+      "projectUniqueName": "D:\\tucilStima\\Tucil3-Stima\\src\\Tucil3Stima\\Tucil3Stima.csproj",
       "projectName": "Tucil3Stima",
-      "projectPath": "C:\\Users\\Lia\\Documents\\test\\Tucil3Stima_Local\\Tucil3Stima\\Tucil3Stima.csproj",
-      "packagesPath": "C:\\Users\\Lia\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\Lia\\Documents\\test\\Tucil3Stima_Local\\Tucil3Stima\\obj\\",
+      "projectPath": "D:\\tucilStima\\Tucil3-Stima\\src\\Tucil3Stima\\Tucil3Stima.csproj",
+      "packagesPath": "C:\\Users\\Rahmah K. Nurdini\\.nuget\\packages\\",
+      "outputPath": "D:\\tucilStima\\Tucil3-Stima\\src\\Tucil3Stima\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
-        "C:\\Users\\Lia\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\Rahmah K. Nurdini\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [

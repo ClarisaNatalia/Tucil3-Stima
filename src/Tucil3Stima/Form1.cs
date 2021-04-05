@@ -89,6 +89,7 @@ namespace Tucil3Stima
                 //label2.Text = b; //tes cobasekaiankali udah bisa hasilin array dari file txt
                 //dah bisa keluar semua as string 
 
+/*Menampilkan Graph*/
                 int banyakgedung = Int16.Parse(cobasekiankali[0]);//insialisasi banyak gedung
                 //label3.Text = banyakgedung.ToString();
 
@@ -97,7 +98,6 @@ namespace Tucil3Stima
                 //a = a * 2.00;
                 //string b = a.ToString("F2");
                 //label4.Text = b;
-
 
                 //bagian bikin list nama gedung dan list koordinat gedung
                 List<string> listgedung = new List<string>();
@@ -180,6 +180,31 @@ namespace Tucil3Stima
 
                 //tampilin graf di formnya
                 gViewer1.Graph = graph;
+
+/*MEMBUAT OBJEK GRAPH*/
+                /*Membuat listSimpul dari Graph*/
+                List<Simpul> listSimpul = new List<Simpul>();
+
+                for (int i=0; i<banyakgedung; i++)
+                {
+                    Simpul tempSimpul = new Simpul(listgedung[i], listkoordinatgedung[i].Item1, listkoordinatgedung[i].Item2);
+                    listSimpul.Add(tempSimpul);
+                }
+
+                /*Membuat matriks of adjacency, inisialisasi semua elemennya false*/
+                bool[,] matAdj = new bool[banyakgedung, banyakgedung];
+                for (int i=0; i<banyakgedung; i++)
+                {
+                    for (int j=0; j<banyakgedung; j++)
+                    {
+                        matAdj[i, j] = false;
+                    }
+                }
+
+                /*Membuat objek graph*/
+                Graph G = new Graph(banyakgedung, listSimpul, nodegraf);
+
+
 
             }
 
