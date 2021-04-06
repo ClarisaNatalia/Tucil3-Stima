@@ -26,17 +26,17 @@ namespace Tucil3Stima
 
 			for (int i=0; i<nodeBersisian.Count; i++)
             {
-				Simpul simpul1 = getSimpulFromName(list, nodeBersisian[i].Item1);
-				int idx1 = list.IndexOf(simpul1);
+				//Simpul simpul1 = getSimpulFromName(list, nodeBersisian[i].Item1);
+				//int idx1 = list.IndexOf(simpul1);
 
-				Simpul simpul2 = getSimpulFromName(list, nodeBersisian[i].Item2);
-				int idx2 = list.IndexOf(simpul2);
+				//Simpul simpul2 = getSimpulFromName(list, nodeBersisian[i].Item2);
+				//int idx2 = list.IndexOf(simpul2);
 
-				matAdj[idx1, idx2] = true;
-				matAdj[idx2, idx1] = true;
+				//matAdj[idx1, idx2] = true;
+				//matAdj[idx2, idx1] = true;
 			}
 
-			this.matAdj = mat;
+			//this.matAdj = mat;
 		}
 
 		public int getNbElmt() { return this.nbSimpul; }
@@ -60,16 +60,16 @@ namespace Tucil3Stima
 			return list;
         }
 		
-		public Simpul getSimpulFromName(List<Simpul> list, string nama)
-        {
-			for (int i=0; i<list.Count; i++)
-            {
-				if (list[i].getNama().Equals(nama))
-				{
-					return list[i];
-				}
-            }
-        }
+		//public Simpul getSimpulFromName(List<Simpul> list, string nama)
+       // {
+		//	for (int i=0; i<list.Count; i++)
+          //  {
+			//	if (list[i].getNama().Equals(nama))
+				//{
+					//return list[i];
+				//}
+            //}
+        //}
 
 		public static void insertElement(List<Element> list, Element e, Simpul tujuan)
 		{

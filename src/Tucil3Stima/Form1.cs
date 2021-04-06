@@ -19,6 +19,7 @@ namespace Tucil3Stima
         }
 
         OpenFileDialog ofd = new OpenFileDialog();
+        OpenFileDialog ofd2 = new OpenFileDialog();
 
         private void button1_Click(object sender, EventArgs e)
         {
@@ -75,6 +76,7 @@ namespace Tucil3Stima
             ///
 
             ofd.Filter = "Text Documents|*.txt";
+            //ofd2.Filter = "Text Documents|*.txt";
             if (ofd.ShowDialog() == DialogResult.OK)
             {
                 label1.Text = ofd.FileName;
@@ -205,9 +207,80 @@ namespace Tucil3Stima
                 Graph G = new Graph(banyakgedung, listSimpul, nodegraf);
 
 
+                //input pilihan ke combo box
+                for(int combos = 0; combos<banyakelemenunik; combos++)
+                {
+                    comboBox1.Items.Add(distinctelement[combos]);
+                    comboBox2.Items.Add(distinctelement[combos]);
+                }
 
             }
 
+            
+
+        }
+        /*  0 1 1 0 
+            0 0 1 1
+            0 0 0 1
+            0 0 0 0 */
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            ofd2.Filter = "Text Documents|*.txt";
+
+            if (ofd2.ShowDialog() == DialogResult.OK)
+            {
+
+                //label7.Text = ofd2.FileName;
+                string readfile2 = System.IO.File.ReadAllText(ofd2.FileName);
+                string[] cobasekiankali2 = readfile2.Split(new[] { "\r\n", "\r", "\n", " "}, StringSplitOptions.None);
+
+                double ukuranmatriksdalamdouble = Math.Sqrt(cobasekiankali2.Length);
+                string ukuranmatriksstring = ukuranmatriksdalamdouble.ToString();
+                int ukuranmatriksint = Int16.Parse(ukuranmatriksstring);
+
+                //string ukuranmatriksstring = (cobasekiankali2.Length).ToString();
+                //label7.Text = ukuranmatriksstring;
+
+                //matriks boolean 
+                bool[,] matriksketerhubungan = new bool[ukuranmatriksint,ukuranmatriksint];
+
+                int matriksbacafile = 0;
+                for(int r = 0; r<ukuranmatriksint; r++)
+                {
+                    for(int co = 0; co<ukuranmatriksint; co++)
+                    {
+                        if(cobasekiankali2[matriksbacafile] == "1")
+                        {
+                            matriksketerhubungan[r, (matriksbacafile % ukuranmatriksint)] = true;
+                        }
+
+                        //if((matriksbacafile % 4 == 0) & (cobasekiankali2[matriksbacafile] == "1"))
+                        //{
+                        //    matriksketerhubungan[r, 0] = true;
+                        //}
+                        //else if((matriksbacafile % 4 == 1) & (cobasekiankali2[matriksbacafile] == "1"))
+                        //{
+                        //    matriksketerhubungan[r, 1] = true;
+                        //}
+                        //else if ((matriksbacafile % 4 == 2) & (cobasekiankali2[matriksbacafile] == "1"))
+                        //{
+                        //    matriksketerhubungan[r, 2] = true;
+                        //}
+                        //else if ((matriksbacafile % 4 == 3) & (cobasekiankali2[matriksbacafile] == "1"))
+                        //{
+                        //    matriksketerhubungan[r, 3] = true;
+                        //}
+
+                        matriksbacafile++;
+                    }
+                }
+
+                //bool coba = false;
+                string tester = matriksketerhubungan[0,1].ToString();
+
+                label7.Text = tester;
+            }
         }
     }
 }
