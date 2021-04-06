@@ -24,7 +24,7 @@ namespace Tucil3Stima
         /*Mendapatkan jarak lurus dari this ke G*/
         public double getStraightDistance(Simpul S)
         {
-            return Math.Sqrt(Math.Pow(this.getX() - S.getX(), 2) + Math.Pow(this.getY() - S.getX(), 2));
+            return Math.Sqrt(Math.Pow(this.getX() - S.getX(), 2) + Math.Pow(this.getY() - S.getY(), 2));
         }
     }
 }

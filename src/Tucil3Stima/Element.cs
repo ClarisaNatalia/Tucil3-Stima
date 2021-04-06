@@ -4,28 +4,31 @@ using System.IO;
 
 namespace Tucil3Stima
 {
-    public class Element
+    public class Elemen
     {
         private Simpul simpul;
         private List<Simpul> path;
 
-        public Element(Simpul s) // Membuat Element dengan path dirinya sendiri saja
+        public Elemen(Simpul s) // Membuat Elemen dengan path dirinya sendiri saja
         {
             this.simpul = s;
             this.path = new List<Simpul>();
             this.path.Add(s);
         }
 
-        public Element(Element e, Simpul s) // Membuat Element dengan path e ditambah path dirinya sendiri
+        public Elemen(List<Simpul> path, Simpul s) // Membuat Elemen dengan path e ditambah path dirinya sendiri
         {
             this.simpul = s;
             this.path = new List<Simpul>();
-            this.path.AddRange(e.path);
+            this.path.AddRange(path);
             this.path.Add(s);
         }
 
-        /*Mendapatkan gedung dari Element*/
-        public Simpul getGedung() { return this.simpul; }
+        /*Mendapatkan gedung dari Elemen*/
+        public Simpul getSimpul() { return this.simpul; }
+
+        /*Mendapatkan path dari Elemen*/
+        public List<Simpul> getPath() { return this.path; }
 
         /*Mendapatkan jarak sejauh path*/
         public double getPathDistance()
@@ -50,20 +53,31 @@ namespace Tucil3Stima
         }
 
         /*Print out path*/
-        public void printPath()
+        public string getPathInString()
         {
-            for (int i = 0; i < path.Count; i++)
+            if (this.path == null)
             {
-                Console.Write(path[i].getNama());
+                return "Tidak ditemukan jalur";
+            }
+            else
+            {
+                string temp = "";
+                for (int i = 0; i < path.Count; i++)
+                {
+                    /*Console.Write(path[i].getNama());*/
+                    temp += path[i].getNama();
 
-                if (i != path.Count - 1)
-                {
-                    Console.Write("->");
+                    if (i != path.Count - 1)
+                    {
+                        /*Console.Write("->");*/
+                        temp += "->";
+                    }
+                    else
+                    {
+                        /*Console.WriteLine();*/
+                    }
                 }
-                else
-                {
-                    Console.WriteLine();
-                }
+                return temp;
             }
         }
     }
