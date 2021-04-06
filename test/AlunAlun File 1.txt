@@ -1,0 +1,19 @@
+8
+MasjidRaya, -6.92165984786416, 107.60622135616822
+Hotel88, -6.921100859637293, 107.60622976052328
+MonumenAsiaAfrika, -6.9212802365285, 107.60773834225725
+MasjidAgung, -6.921417897817364, 107.60762068128635
+BioskopDian, -6.9225150151389805, 107.6074820094278
+ParahyanganPlaza, -6.922360667989351, 107.60627178229859
+MenaraBRI, -6.921027250329429, 107.60732708692336
+KantorPos, -6.920777990887927, 107.60618170826935
+KantorPos,Hotel88
+Hotel88,MenaraBRI
+Hotel88,MonumenAsiaAfrika
+MenaraBRI,MonumenAsiaAfrika
+MonumenAsiaAfrika,MasjidAgung
+BioskopDian,MasjidAgung
+BioskopDian,ParahyanganPlaza
+MasjidRaya,ParahyanganPlaza
+MasjidRaya,Hotel88
+KantorPos,MenaraBRI

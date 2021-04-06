@@ -17,28 +17,6 @@ namespace Tucil3Stima
 			this.matAdj = mat;
 		}
 
-/*		public Graph(int n, List<Simpul> list, List<Tuple<string, string>> nodeBersisian)
-		{
-			this.nbSimpul = n;
-			this.listSimpul = list;
-
-			bool[,] mat = new bool[n, n];
-
-			for (int i = 0; i < nodeBersisian.Count; i++)
-			{
-				Simpul simpul1 = getSimpulFromName(list, nodeBersisian[i].Item1);
-				int idx1 = list.IndexOf(simpul1);
-
-				Simpul simpul2 = getSimpulFromName(list, nodeBersisian[i].Item2);
-				int idx2 = list.IndexOf(simpul2);
-
-				matAdj[idx1, idx2] = true;
-				matAdj[idx2, idx1] = true;
-			}
-
-			this.matAdj = mat;
-		}*/
-
 		public int getNbElmt() { return this.nbSimpul; }
 
 		public Simpul getSimpulAtIdx(int idx) { return this.listSimpul[idx]; }
@@ -53,34 +31,16 @@ namespace Tucil3Stima
 			{
 				if (matAdj[getIdxOfSimpul(s), i])
 				{
-					/*					Console.WriteLine(s.getNama() + " bertetangga dengan " + getSimpulAtIdx(i).getNama() + i);
-					*/
 					if (!list.Contains(getSimpulAtIdx(i)))
 					{
 						list.Add(getSimpulAtIdx(i));
-
-						/*						for (int j=0; j<list.Count; j++)
-												{
-													Console.WriteLine(list[j].getNama());
-												}*/
 					}
 				}
 			}
 			return list;
 		}
 
-		public Simpul getSimpulFromName(List<Simpul> list, string nama)
-		{
-			for (int i = 0; i < list.Count; i++)
-			{
-				if (list[i].getNama().Equals(nama))
-				{
-					return list[i];
-				}
-			}
-			return null;
-		}
-
+		/*Melakukan sort list dari f(n) terkecil sampai terbesar*/
 		public void sortList(List<Elemen> list, Simpul tujuan)
 		{
 			for (var i = 0; i < list.Count; i++)
@@ -94,11 +54,11 @@ namespace Tucil3Stima
 					}
 				}
 
-				if (min != i)
+				if (i != min)
 				{
-					var lowerValue = list[min];
+					var valRendah = list[min];
 					list[min] = list[i];
-					list[i] = lowerValue;
+					list[i] = valRendah;
 				}
 			}
 		}
@@ -107,85 +67,33 @@ namespace Tucil3Stima
 		{
 			if (list.Count == 0) // Sudah tidak ada simpul yang ingin dikunjungi
 			{
-				/*				Console.WriteLine("List kosong");*/
 				return null;
 			}
 			else if (list[0].getSimpul().Equals(tujuan)) // Sudah ketemu jarak terpendek
 			{
-				/*				Console.WriteLine("Sampai tujuan");*/
 				return list[0];
 			}
 			else
 			{
+				// Mendapatkan semua simpul yang bertetangga
 				List<Simpul> listAdjSimpul = getAllAdjSimpul(list[0].getSimpul());
-				/*				Console.WriteLine("Kondisi listSimpul:");
-								for (int j = 0; j < listAdjSimpul.Count; j++)
-								{
-									Console.WriteLine(listAdjSimpul[j].getNama());
-								}
-								Console.WriteLine("Kondisi list sebelum nambah simpul2 yg diekspan:");
-								for (int j = 0; j < list.Count; j++)
-								{
-									Console.WriteLine(list[j].getSimpul().getNama());
-								}
-								Console.WriteLine("Jumlah element list: " + list.Count);*/
+
 				for (int i = 0; i < listAdjSimpul.Count; i++)
 				{
 					List<Simpul> newPath = list[0].getPath();
 					Elemen E = new Elemen(newPath, listAdjSimpul[i]);
-					/*					Console.WriteLine(E.getPathInString());*/
-					/*INSERT ELEMENT*/
+
+					// Insert simpul yang bertetangga ke list, kemudian disort
 					list.Add(E);
 					sortList(list, tujuan);
-
-					/*					List<Elemen> newList = new List<Elemen>();*/
-					/*insertElemen(list, E, tujuan);*/
-					/*					if (list.Count == 0)
-										{
-											Console.WriteLine("List kosong");
-											list.Add(E);
-										}
-
-										else
-										{
-											for (int j = 0; j < list.Count; j++)
-											{
-												if (E.countFn(tujuan) < list[j].countFn(tujuan))
-												{
-													Console.Write("Insert " + E.getSimpul().getNama() + " ke list");
-													*//*list.Insert(j, E);*
-					/*								List<Elemen> remainList = new List<Elemen>();
-													remainList.Add(E);
-													remainList.AddRange(list.GetRange(j+1))
-													list.InsertRange(j, E);*/
-					/*break;*//*
 				}
-				else if (j == list.Count-1)
-				{
-					list.Add(E);
-				}
-			}
-		}*/
-					/*
-										Console.WriteLine("Kondisi list setelah ditambah simpul yg diekspan:");
-										for (int j = 0; j < list.Count; j++)
-										{
-											Console.WriteLine(list[j].getSimpul().getNama());
-										}*/
-				}
-				/*				Console.WriteLine("Masuk rekursif");
-								Console.WriteLine("Kondisi list yang akan masuk rekursif:");
-								for (int j = 0; j < list.Count; j++)
-								{
-									Console.WriteLine(list[j].getSimpul().getNama());
-								}*/
-
 
 				list.Remove(list[0]);
 
+				// Jika balik lagi ke simpul asal
 				if (list[0].getSimpul().Equals(asal))
                 {
-					return null;
+					list.Remove(list[0]);
                 }
 
 				return getAStar(asal, tujuan, list);

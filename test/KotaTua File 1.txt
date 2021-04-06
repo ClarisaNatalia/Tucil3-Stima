@@ -1,0 +1,17 @@
+8
+JakartaHistoryMuseum, -6.13490, 106.81327
+StasiunKeretaKotaTua, -6.13398, 106.81863
+UniversitasBundaMulia, -6.1299, 106.81841
+ITCManggaDua, -6.13540, 106.82462
+WTCManggaDua, -6.13439, 106.83097
+BankMandiriJakartaAncol, -6.12839, 106.82233
+PTLookmanDjajaLogistic, -6.12820, 106.82753
+TamanImpianJayaAncol, -6.12896, 106.83338
+JakartaHistoryMuseum,StasiunKeretaKotaTua
+StasiunKeretaKotaTua,UniversitasBundaMulia
+StasiunKeretaKotaTua,ITCManggaDua
+ITCManggaDua,WTCManggaDua
+WTCManggaDua,TamanImpianJayaAncol
+UniversitasBundaMulia,BankMandiriJakartaAncol
+BankMandiriJakartaAncol,PTLookmanDjajaLogistic
+PTLookmanDjajaLogistic,TamanImpianJayaAncol

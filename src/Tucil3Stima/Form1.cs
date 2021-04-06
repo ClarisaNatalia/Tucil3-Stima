@@ -35,33 +35,14 @@ namespace Tucil3Stima
                 string readfile = System.IO.File.ReadAllText(ofd.FileName);
                 string[] cobasekiankali = readfile.Split(new[] { "\r\n", "\r", "\n", "," }, StringSplitOptions.None);
 
-                //label2.Text = cobasekiankali[13];
-
-                //testing ubah dari string ke double
-                //double a = double.Parse(cobasekiankali[9], System.Globalization.CultureInfo.InvariantCulture);
-                //double.Parse(cobasekiankali[9], System.Globalization.CultureInfo.InvariantCulture);
-                //a = a * 2.00;
-                //string b = a.ToString("F2");
-                //label2.Text = b; //tes cobasekaiankali udah bisa hasilin array dari file txt
-                //dah bisa keluar semua as string 
-
-/*Menampilkan Graph*/
-                int banyakgedung = Int16.Parse(cobasekiankali[0]);//insialisasi banyak gedung
+                int banyakgedung = Int16.Parse(cobasekiankali[0]); //insialisasi banyak gedung
                 this.nbSimpulForm = banyakgedung;
-                //label3.Text = banyakgedung.ToString();
-
-                //int i = 1;
-                //double a = double.Parse(cobasekiankali[i = i +2], System.Globalization.CultureInfo.InvariantCulture);
-                //a = a * 2.00;
-                //string b = a.ToString("F2");
-                //label4.Text = b;
 
                 //bagian bikin list nama gedung dan list koordinat gedung
                 List<string> listgedung = new List<string>();
                 List <Tuple<double,double>> listkoordinatgedung = new List<Tuple<double,double>> ();
-                //listgedung[0] = new string("hehe");
                 int isekarang = 0;
-                //int indexgedung = 0;
+
                 for (int i = 1; i < banyakgedung*3.00; i++)
                 {
                     listgedung.Add(cobasekiankali[i]);
@@ -69,15 +50,7 @@ namespace Tucil3Stima
                     double koordy = double.Parse(cobasekiankali[i = i + 1], System.Globalization.CultureInfo.InvariantCulture);
                     listkoordinatgedung.Add(Tuple.Create(koordx, koordy));
                     isekarang = i;
-                    //indexgedung++;
-
                 }
-
-                //label3.Text = listgedung[0];
-                //string b = listkoordinatgedung[0].Item1.ToString("F2");
-                //string b = isekarang.ToString();
-                //label3.Text = b;
-
 
                 //list node yang terhubung, buat bikin grafnya 
                 int banyakelemenbacafile = cobasekiankali.Length;
@@ -87,11 +60,8 @@ namespace Tucil3Stima
                 {
                     nodegraf.Add(Tuple.Create(cobasekiankali[mulai], cobasekiankali[mulai = mulai + 1]));
                 }
-                //string c = banyakelemenbacafile.ToString();
-                //label4.Text = nodegraf[1].Item1;
 
-
-                //membuat graf
+                //menampilkan graph
                 Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
 
                 for (int qwe = 0; qwe < nodegraf.Count; qwe++)
@@ -138,7 +108,6 @@ namespace Tucil3Stima
                 //tampilin graf di formnya
                 gViewer1.Graph = graph;
 
-/*MEMBUAT OBJEK GRAPH*/
                 /*Membuat listSimpul dari Graph*/
                 List<Simpul> listSimpul = new List<Simpul>();
 
@@ -150,36 +119,14 @@ namespace Tucil3Stima
 
                 this.listSimpulForm = listSimpul;
 
-                /*Membuat matriks of adjacency, inisialisasi semua elemennya false*//*
-                bool[,] matAdj = new bool[banyakgedung, banyakgedung];
-                for (int i=0; i<banyakgedung; i++)
-                {
-                    for (int j=0; j<banyakgedung; j++)
-                    {
-                        matAdj[i, j] = false;
-                    }
-                }
-
-                *//*Membuat objek graph*//*
-                Graph G = new Graph(banyakgedung, listSimpul, nodegraf);*/
-
-
                 //input pilihan ke combo box
                 for(int combos = 0; combos<banyakelemenunik; combos++)
                 {
                     comboBox1.Items.Add(distinctelement[combos]);
                     comboBox2.Items.Add(distinctelement[combos]);
                 }
-
             }
-
-            
-
         }
-        /*  0 1 1 0 
-            0 0 1 1
-            0 0 0 1
-            0 0 0 0 */
 
         private void button2_Click(object sender, EventArgs e)
         {
@@ -196,10 +143,7 @@ namespace Tucil3Stima
                 string ukuranmatriksstring = ukuranmatriksdalamdouble.ToString();
                 int ukuranmatriksint = Int16.Parse(ukuranmatriksstring);
 
-                //string ukuranmatriksstring = (cobasekiankali2.Length).ToString();
-                //label7.Text = ukuranmatriksstring;
-
-                //matriks boolean 
+                //membuat matriks boolean 
                 bool[,] matriksketerhubungan = new bool[ukuranmatriksint,ukuranmatriksint];
 
                 int matriksbacafile = 0;
@@ -212,33 +156,13 @@ namespace Tucil3Stima
                             matriksketerhubungan[r, (matriksbacafile % ukuranmatriksint)] = true;
                         }
 
-                        //if((matriksbacafile % 4 == 0) & (cobasekiankali2[matriksbacafile] == "1"))
-                        //{
-                        //    matriksketerhubungan[r, 0] = true;
-                        //}
-                        //else if((matriksbacafile % 4 == 1) & (cobasekiankali2[matriksbacafile] == "1"))
-                        //{
-                        //    matriksketerhubungan[r, 1] = true;
-                        //}
-                        //else if ((matriksbacafile % 4 == 2) & (cobasekiankali2[matriksbacafile] == "1"))
-                        //{
-                        //    matriksketerhubungan[r, 2] = true;
-                        //}
-                        //else if ((matriksbacafile % 4 == 3) & (cobasekiankali2[matriksbacafile] == "1"))
-                        //{
-                        //    matriksketerhubungan[r, 3] = true;
-                        //}
-
                         matriksbacafile++;
                     }
                 }
 
                 this.matAdjForm = matriksketerhubungan;
 
-                //bool coba = false;
                 string tester = matriksketerhubungan[0,1].ToString();
-
-                //label7.Text = tester;
             }
         }
 
@@ -269,51 +193,36 @@ namespace Tucil3Stima
                 }
             }
 
+            /*Membuat objek Graph*/
             Graph G = new Graph(this.nbSimpulForm, this.listSimpulForm, this.matAdjForm);
 
             List<Elemen> listElemen = new List<Elemen>();
             listElemen.Add(new Elemen(simpulAsal));
 
+            /*Mendapatkan jalur terpendek dengan algortima A star*/
             Elemen E = G.getAStar(simpulAsal, simpulTujuan, listElemen);
 
             if (E == null)
             {
-                label8.Text = "Tidak ada jalur tersedia";
+                label8.Text = "Tidak ada jalur yang tersedia";
             }
             else
             {
-                label8.Text = "Jarak yang ditempuh:" + E.getPathDistance().ToString();
+                label8.Text = "Jarak yang ditempuh: " + E.getPathDistance().ToString() + " km";
             }
             
 
             string readfile = System.IO.File.ReadAllText(ofd.FileName);
             string[] cobasekiankali = readfile.Split(new[] { "\r\n", "\r", "\n", "," }, StringSplitOptions.None);
 
-            //testing ubah dari string ke double
-            //double a = double.Parse(cobasekiankali[9], System.Globalization.CultureInfo.InvariantCulture);
-            //double.Parse(cobasekiankali[9], System.Globalization.CultureInfo.InvariantCulture);
-            //a = a * 2.00;
-            //string b = a.ToString("F2");
-            //label2.Text = b; //tes cobasekaiankali udah bisa hasilin array dari file txt
-            //dah bisa keluar semua as string 
-
-            /*Menampilkan Graph*/
-            int banyakgedung = Int16.Parse(cobasekiankali[0]);//insialisasi banyak gedung
+            int banyakgedung = Int16.Parse(cobasekiankali[0]); //insialisasi banyak gedung
             this.nbSimpulForm = banyakgedung;
-            //label3.Text = banyakgedung.ToString();
-
-            //int i = 1;
-            //double a = double.Parse(cobasekiankali[i = i +2], System.Globalization.CultureInfo.InvariantCulture);
-            //a = a * 2.00;
-            //string b = a.ToString("F2");
-            //label4.Text = b;
 
             //bagian bikin list nama gedung dan list koordinat gedung
             List<string> listgedung = new List<string>();
             List<Tuple<double, double>> listkoordinatgedung = new List<Tuple<double, double>>();
-            //listgedung[0] = new string("hehe");
             int isekarang = 0;
-            //int indexgedung = 0;
+
             for (int i = 1; i < banyakgedung * 3.00; i++)
             {
                 listgedung.Add(cobasekiankali[i]);
@@ -321,15 +230,7 @@ namespace Tucil3Stima
                 double koordy = double.Parse(cobasekiankali[i = i + 1], System.Globalization.CultureInfo.InvariantCulture);
                 listkoordinatgedung.Add(Tuple.Create(koordx, koordy));
                 isekarang = i;
-                //indexgedung++;
-
             }
-
-            //label3.Text = listgedung[0];
-            //string b = listkoordinatgedung[0].Item1.ToString("F2");
-            //string b = isekarang.ToString();
-            //label3.Text = b;
-
 
             //list node yang terhubung, buat bikin grafnya 
             int banyakelemenbacafile = cobasekiankali.Length;
@@ -339,9 +240,6 @@ namespace Tucil3Stima
             {
                 nodegraf.Add(Tuple.Create(cobasekiankali[mulai], cobasekiankali[mulai = mulai + 1]));
             }
-            //string c = banyakelemenbacafile.ToString();
-            //label4.Text = nodegraf[1].Item1;
-
 
             //membuat graf
             Microsoft.Msagl.Drawing.Graph graph = new Microsoft.Msagl.Drawing.Graph("graph");
@@ -354,19 +252,12 @@ namespace Tucil3Stima
                 {
                     for (int i = 0; i < E.getPath().Count - 1; i++)
                     {
-                        //* graph.FindNode(E.getPath()[i].getNama(), E.getPath()[i + 1].getNama());
-                        /*graph.AddEdge(E.getPath()[i].getNama(), E.getPath()[i + 1].getNama()).Attr.Color = Microsoft.Msagl.Drawing.Color.Coral;*//**/
                         bool conditional1 = (nodegraf[qwe].Item1.Equals(E.getPath()[i].getNama()) && nodegraf[qwe].Item2.Equals(E.getPath()[i + 1].getNama()));
                         bool conditional2 = (nodegraf[qwe].Item2.Equals(E.getPath()[i].getNama()) && nodegraf[qwe].Item1.Equals(E.getPath()[i + 1].getNama()));
                         if (conditional1 || conditional2)
                         {
                             edge.Attr.Color = Microsoft.Msagl.Drawing.Color.ForestGreen;
                         }
-                        /*                    else
-                                            {
-                                                graph.AddEdge(nodegraf[qwe].Item1, nodegraf[qwe].Item2);
-                                            }*/
-
                     }
                 }
             }

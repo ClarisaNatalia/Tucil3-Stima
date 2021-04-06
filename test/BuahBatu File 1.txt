@@ -1,0 +1,18 @@
+9
+SamsatKawaluyaan, -6.9331, 107.66292
+IstanaKanaKawaluyaan, -6.93644, 107.66303
+PTGudangGaram, -6.93862, 107.66058
+MetroIndahMall, -6.94179, 107.65875
+EdelweissHospital, -6.94331, 107.64964
+MetroTradeCenter, -6.94292, 107.65895
+RumahMakanLaksana, -6.94177, 107.65170
+BaliWorldHotel, -6.93806, 107.66319
+RSIAHumanaPrima, -6.94052, 107.66401
+SamsatKawaluyaan,IstanaKanaKawaluyaan
+IstanaKanaKawaluyaan,BaliWorldHotel
+BaliWorldHotel,RSIAHumanaPrima
+BaliWorldHotel,PTGudangGaram
+PTGudangGaram,MetroIndahMall
+PTGudangGaram,RumahMakanLaksana
+MetroIndahMall,MetroTradeCenter
+RumahMakanLaksana,EdelweissHospital

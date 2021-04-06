@@ -21,7 +21,7 @@ namespace Tucil3Stima
 
         public double getY() { return coorY; }
 
-        /*Mendapatkan jarak lurus dari this ke G*/
+        /*Mendapatkan jarak lurus dari this ke S*/
         public double getStraightDistance(Simpul S)
         {
             return Math.Sqrt(Math.Pow(this.getX() - S.getX(), 2) + Math.Pow(this.getY() - S.getY(), 2));

@@ -64,17 +64,11 @@ namespace Tucil3Stima
                 string temp = "";
                 for (int i = 0; i < path.Count; i++)
                 {
-                    /*Console.Write(path[i].getNama());*/
                     temp += path[i].getNama();
 
                     if (i != path.Count - 1)
                     {
-                        /*Console.Write("->");*/
                         temp += "->";
-                    }
-                    else
-                    {
-                        /*Console.WriteLine();*/
                     }
                 }
                 return temp;
