@@ -34,9 +34,6 @@ namespace Tucil3Stima
             this.button1 = new System.Windows.Forms.Button();
             this.openFileDialog1 = new System.Windows.Forms.OpenFileDialog();
             this.label1 = new System.Windows.Forms.Label();
-            this.label2 = new System.Windows.Forms.Label();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
             this.comboBox1 = new System.Windows.Forms.ComboBox();
             this.comboBox2 = new System.Windows.Forms.ComboBox();
             this.label5 = new System.Windows.Forms.Label();
@@ -63,7 +60,7 @@ namespace Tucil3Stima
             this.gViewer1.InsertingEdge = false;
             this.gViewer1.LayoutAlgorithmSettingsButtonVisible = false;
             this.gViewer1.LayoutEditingEnabled = true;
-            this.gViewer1.Location = new System.Drawing.Point(450, 48);
+            this.gViewer1.Location = new System.Drawing.Point(817, 44);
             this.gViewer1.LooseOffsetForRouting = 0.25D;
             this.gViewer1.MouseHitDistance = 0.05D;
             this.gViewer1.Name = "gViewer1";
@@ -77,7 +74,7 @@ namespace Tucil3Stima
             this.gViewer1.SaveButtonVisible = true;
             this.gViewer1.SaveGraphButtonVisible = true;
             this.gViewer1.SaveInVectorFormatEnabled = true;
-            this.gViewer1.Size = new System.Drawing.Size(317, 336);
+            this.gViewer1.Size = new System.Drawing.Size(364, 450);
             this.gViewer1.TabIndex = 0;
             this.gViewer1.TightOffsetForRouting = 0.125D;
             this.gViewer1.ToolBarIsVisible = true;
@@ -89,11 +86,11 @@ namespace Tucil3Stima
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(75, 81);
+            this.button1.Location = new System.Drawing.Point(44, 32);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(128, 48);
             this.button1.TabIndex = 1;
-            this.button1.Text = "button1";
+            this.button1.Text = "File 1";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.button1_Click);
             // 
@@ -104,43 +101,15 @@ namespace Tucil3Stima
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(75, 150);
+            this.label1.Location = new System.Drawing.Point(178, 44);
             this.label1.Name = "label1";
-            this.label1.Size = new System.Drawing.Size(59, 25);
+            this.label1.Size = new System.Drawing.Size(0, 25);
             this.label1.TabIndex = 2;
-            this.label1.Text = "label1";
-            // 
-            // label2
-            // 
-            this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(75, 185);
-            this.label2.Name = "label2";
-            this.label2.Size = new System.Drawing.Size(59, 25);
-            this.label2.TabIndex = 3;
-            this.label2.Text = "label2";
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(75, 242);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(59, 25);
-            this.label3.TabIndex = 4;
-            this.label3.Text = "label3";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(75, 282);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(59, 25);
-            this.label4.TabIndex = 5;
-            this.label4.Text = "label4";
             // 
             // comboBox1
             // 
             this.comboBox1.FormattingEnabled = true;
-            this.comboBox1.Location = new System.Drawing.Point(212, 177);
+            this.comboBox1.Location = new System.Drawing.Point(45, 206);
             this.comboBox1.Name = "comboBox1";
             this.comboBox1.Size = new System.Drawing.Size(182, 33);
             this.comboBox1.TabIndex = 7;
@@ -148,7 +117,7 @@ namespace Tucil3Stima
             // comboBox2
             // 
             this.comboBox2.FormattingEnabled = true;
-            this.comboBox2.Location = new System.Drawing.Point(212, 274);
+            this.comboBox2.Location = new System.Drawing.Point(274, 206);
             this.comboBox2.Name = "comboBox2";
             this.comboBox2.Size = new System.Drawing.Size(182, 33);
             this.comboBox2.TabIndex = 8;
@@ -156,7 +125,7 @@ namespace Tucil3Stima
             // label5
             // 
             this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(223, 151);
+            this.label5.Location = new System.Drawing.Point(45, 177);
             this.label5.Name = "label5";
             this.label5.Size = new System.Drawing.Size(44, 25);
             this.label5.TabIndex = 9;
@@ -165,7 +134,7 @@ namespace Tucil3Stima
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(223, 242);
+            this.label6.Location = new System.Drawing.Point(274, 177);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(31, 25);
             this.label6.TabIndex = 10;
@@ -177,48 +146,46 @@ namespace Tucil3Stima
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(223, 81);
+            this.button2.Location = new System.Drawing.Point(45, 93);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(127, 48);
             this.button2.TabIndex = 11;
-            this.button2.Text = "button2";
+            this.button2.Text = "File matriks";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
             // label7
             // 
             this.label7.AutoSize = true;
-            this.label7.Location = new System.Drawing.Point(367, 93);
+            this.label7.Location = new System.Drawing.Point(178, 105);
             this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(59, 25);
+            this.label7.Size = new System.Drawing.Size(0, 25);
             this.label7.TabIndex = 12;
-            this.label7.Text = "label7";
             // 
             // button3
             // 
-            this.button3.Location = new System.Drawing.Point(157, 336);
+            this.button3.Location = new System.Drawing.Point(178, 300);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(128, 48);
             this.button3.TabIndex = 13;
-            this.button3.Text = "button3";
+            this.button3.Text = "Hitung";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.button3_Click);
             // 
             // label8
             // 
             this.label8.AutoSize = true;
-            this.label8.Location = new System.Drawing.Point(195, 396);
+            this.label8.Location = new System.Drawing.Point(99, 382);
             this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(59, 25);
+            this.label8.Size = new System.Drawing.Size(0, 25);
             this.label8.TabIndex = 14;
-            this.label8.Text = "label8";
             this.label8.Click += new System.EventHandler(this.label8_Click);
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(10F, 25F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(800, 450);
+            this.ClientSize = new System.Drawing.Size(1252, 531);
             this.Controls.Add(this.label8);
             this.Controls.Add(this.button3);
             this.Controls.Add(this.label7);
@@ -227,9 +194,6 @@ namespace Tucil3Stima
             this.Controls.Add(this.label5);
             this.Controls.Add(this.comboBox2);
             this.Controls.Add(this.comboBox1);
-            this.Controls.Add(this.label4);
-            this.Controls.Add(this.label3);
-            this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.gViewer1);
@@ -246,9 +210,6 @@ namespace Tucil3Stima
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.OpenFileDialog openFileDialog1;
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.Label label2;
-        private System.Windows.Forms.Label label3;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.ComboBox comboBox1;
         private System.Windows.Forms.ComboBox comboBox2;
         private System.Windows.Forms.Label label5;

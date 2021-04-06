@@ -6,8 +6,8 @@
       "version": "3.1.0"
     },
     "additionalProbingPaths": [
-      "C:\\Users\\Rahmah K. Nurdini\\.dotnet\\store\\|arch|\\|tfm|",
-      "C:\\Users\\Rahmah K. Nurdini\\.nuget\\packages"
+      "C:\\Users\\Lia\\.dotnet\\store\\|arch|\\|tfm|",
+      "C:\\Users\\Lia\\.nuget\\packages"
     ],
     "configProperties": {
       "Microsoft.NETCore.DotNetHostPolicy.SetAppPaths": true

@@ -35,7 +35,7 @@ namespace Tucil3Stima
                 string readfile = System.IO.File.ReadAllText(ofd.FileName);
                 string[] cobasekiankali = readfile.Split(new[] { "\r\n", "\r", "\n", "," }, StringSplitOptions.None);
 
-                label2.Text = cobasekiankali[13];
+                //label2.Text = cobasekiankali[13];
 
                 //testing ubah dari string ke double
                 //double a = double.Parse(cobasekiankali[9], System.Globalization.CultureInfo.InvariantCulture);
@@ -75,8 +75,8 @@ namespace Tucil3Stima
 
                 //label3.Text = listgedung[0];
                 //string b = listkoordinatgedung[0].Item1.ToString("F2");
-                string b = isekarang.ToString();
-                label3.Text = b;
+                //string b = isekarang.ToString();
+                //label3.Text = b;
 
 
                 //list node yang terhubung, buat bikin grafnya 
@@ -188,7 +188,7 @@ namespace Tucil3Stima
             if (ofd2.ShowDialog() == DialogResult.OK)
             {
 
-                //label7.Text = ofd2.FileName;
+                label7.Text = ofd2.FileName;
                 string readfile2 = System.IO.File.ReadAllText(ofd2.FileName);
                 string[] cobasekiankali2 = readfile2.Split(new[] { "\r\n", "\r", "\n", " "}, StringSplitOptions.None);
 
@@ -238,7 +238,7 @@ namespace Tucil3Stima
                 //bool coba = false;
                 string tester = matriksketerhubungan[0,1].ToString();
 
-                label7.Text = tester;
+                //label7.Text = tester;
             }
         }
 
@@ -327,8 +327,8 @@ namespace Tucil3Stima
 
             //label3.Text = listgedung[0];
             //string b = listkoordinatgedung[0].Item1.ToString("F2");
-            string b = isekarang.ToString();
-            label3.Text = b;
+            //string b = isekarang.ToString();
+            //label3.Text = b;
 
 
             //list node yang terhubung, buat bikin grafnya 

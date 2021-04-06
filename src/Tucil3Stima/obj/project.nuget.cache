@@ -1,13 +1,13 @@
 {
   "version": 2,
-  "dgSpecHash": "i2uVtNzzsuC16x9J1wRFV5hbTKdAo+PRDZ1MKv5txrVlsL+wH4YZotDs5iHbGAE57tmAKcW/O+3fyuVV6FsAQQ==",
+  "dgSpecHash": "YmWx6U+0L0S2WH36hWlqBpavChZohCPjGwY3zz6r3+1BvSRIstOXOydZIdFNp5cnD5O6VSRjDUaVKsDL+oZqAg==",
   "success": true,
-  "projectFilePath": "D:\\tucilStima\\github2\\Tucil3-Stima\\src\\Tucil3Stima\\Tucil3Stima.csproj",
+  "projectFilePath": "C:\\Users\\Lia\\Documents\\test\\Tucil3-Stima\\src\\Tucil3Stima\\Tucil3Stima.csproj",
   "expectedPackageFiles": [
-    "C:\\Users\\Rahmah K. Nurdini\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
-    "C:\\Users\\Rahmah K. Nurdini\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
-    "C:\\Users\\Rahmah K. Nurdini\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
-    "C:\\Users\\Rahmah K. Nurdini\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
+    "C:\\Users\\Lia\\.nuget\\packages\\automaticgraphlayout\\1.1.11\\automaticgraphlayout.1.1.11.nupkg.sha512",
+    "C:\\Users\\Lia\\.nuget\\packages\\automaticgraphlayout.drawing\\1.1.11\\automaticgraphlayout.drawing.1.1.11.nupkg.sha512",
+    "C:\\Users\\Lia\\.nuget\\packages\\automaticgraphlayout.graphviewergdi\\1.1.11\\automaticgraphlayout.graphviewergdi.1.1.11.nupkg.sha512",
+    "C:\\Users\\Lia\\.nuget\\packages\\automaticgraphlayout.wpfgraphcontrol\\1.1.11\\automaticgraphlayout.wpfgraphcontrol.1.1.11.nupkg.sha512"
   ],
   "logs": []
 }
